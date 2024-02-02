@@ -4,6 +4,8 @@ A dive into bivalves mitochondrial oddity
 After having accurately found mitochondrial genomes of a large number of bivalves (following Maeda et al. 2021 and others), I've downloaded them using ncbi tools.
 The starting file, dataset.txt, looked like this:
 
+|nc_codes| order| family| species| typo|
+|--------|------|-------|--------|-----|
 |NC_008451	|Adapedonta	|Hiatellidae	|Hiatella arctica|	SMI|
 |NC_016665	|Adapedonta	|Solenidae	|Solen grandis	|SMI|
 |NC_017616	|Adapedonta	|Solenidae	|Solen strictus	|SMI|
