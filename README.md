@@ -16,13 +16,17 @@ OR416184	Cardiida	Donacidae	Donax semistriatus	Male
 
 Be sure to read /n as the line separator with IFS, and to have ncbi tools on your conda env.
 
-```for x in $(awk '{print $})'
+```
+for x in $(awk '{print $})'
 do esearch -db nuccore -query $x | efetch -format gb >> all.gb
-done```
+done
+```
 
 Process this large genbank file using  a custom python script (extracting_feature_v4.py), to obtain protein and nucleotide sequences.
 
-```python extracting_feature_v4.py```
+```
+python extracting_feature_v4.py
+```
 
 At the same time, I produced a list of names from the species name, including order and family name of the species.
 ```
