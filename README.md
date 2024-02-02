@@ -31,4 +31,5 @@ python extracting_feature_v4.py
 ```
 
 At the same time, I produced a list of names from the species name, including order and family name of the species (need to be corrected manually).
+Non ha senso che scriva tutto quanto qua, passa a fare la lista e bona.
 ```
