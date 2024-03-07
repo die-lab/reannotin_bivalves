@@ -30,8 +30,6 @@ MN449487	Mytilida	Mytilidae	Geukensia demissa	Female
 MN449488	Mytilida	Mytilidae	Geukensia demissa	Male
 KX821783	Mytilida	Mytilidae	Modiolus modiolus	Male
 NC_33537	Mytilida	Mytilidae	Modiolus modiolus	Female
-GU001953	Mytilida	Mytilidae	Musculista senhousia	Female
-GU001954	Mytilida	Mytilidae	Musculista senhousia	Male
 MT800514	Mytilida	Mytilidae	Mytella strigata	Female?
 NC_056377	Mytilida	Mytilidae	Mytella strigata	Male?
 JX486123	Mytilida	Mytilidae	Mytilus californianus	Male
@@ -72,8 +70,6 @@ NC_018752	Pterioida	Pteriidae	Pinctada maxima	SMI
 NC_017612	Solemyida	Solemyidae	Solemya velum	SMI
 KF030963	Unionida	Unionidae	Anodonta anatina	Male
 NC_22803	Unionida	Unionidae	Anodonta anatina	Female
-KJ775864	Unionida	Unionidae	Arconaia lanceolata	Male
-NC_23955	Unionida	Unionidae	Arconaia lanceolata	Female
 MK994770	Unionida	Unionidae	Chamberlainia hainesiana	Female
 MK994771	Unionida	Unionidae	Chamberlainia hainesiana	Male
 NC_012716	Unionida	Unionidae	Cristaria plicata	SMI
@@ -129,8 +125,6 @@ NC_023250	Unionida	Unionidae	Solenaia carinatus	Female
 KY007143	Unionida	Unionidae	Solenaia oleivora	Male
 NC_22701	Unionida	Unionidae	Solenaia oleivora	Female
 NC_015483	Unionida	Unionidae	Toxolasma parvus	SMI
-MK994773	Unionida	Unionidae	Unio bonellii	Male
-NC_44111	Unionida	Unionidae	Unio bonellii	Female
 KY290447	Unionida	Unionidae	Unio crassus	Female
 KY290450	Unionida	Unionidae	Unio crassus	Male
 KT326918	Unionida	Unionidae	Unio delphinus	Male
