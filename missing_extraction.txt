@@ -1,0 +1,16 @@
+ls: cannot access 'NC_33537*': No such file or directory
+ls: cannot access 'NC_24733*': No such file or directory
+ls: cannot access 'NC_39571*': No such file or directory
+ls: cannot access 'NC_22803*': No such file or directory
+ls: cannot access 'NC_34846*': No such file or directory
+ls: cannot access 'NC_11763*': No such file or directory
+ls: cannot access 'NC_37720*': No such file or directory
+ls: cannot access 'NC_37721*': No such file or directory
+ls: cannot access 'NC_33858*': No such file or directory
+ls: cannot access 'NC_22701*': No such file or directory
+ls: cannot access 'NC_33854*': No such file or directory
+ls: cannot access 'MG838920*': No such file or directory
+ls: cannot access 'MG838921*': No such file or directory
+ls: cannot access 'OP187076*': No such file or directory
+ls: cannot access 'OP187077*': No such file or directory
+(mybase) PERSONALE^diego.carli2@SGBGA-D142238S:~/reannoti
