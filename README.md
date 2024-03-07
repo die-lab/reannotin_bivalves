@@ -19,9 +19,11 @@ The starting file, dataset.txt, looked like this:
 Be sure to read /n as the line separator with IFS, and to have ncbi tools on your conda env.
 
 ```
-for x in $(awk '{print $})'
+for x in $(awk '{print $1}' dataset.txt)'
 do esearch -db nuccore -query $x | efetch -format gb >> all.gb
 done
+
+awk '{print $1}' dataset.txt > nc_codes.txt
 ```
 
 Process this large genbank file using  a custom python script (extracting_feature_v4.py), to obtain protein and nucleotide sequences.
