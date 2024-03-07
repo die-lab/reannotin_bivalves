@@ -1,19 +1,5 @@
 #Maybe we will want to avoid having mitochondrial genome of low quality, or with no indication about sex, or other reasons.
 
-#I do not know what the sex is.
+#I do not know what the sex is. So I have removed them from the analyses.
 MT800514
-NC_056377
-
-#Do not why but they have a '0' after 'NC_', coming from nowhere
-NC_011763
-NC_022701
-NC_024733
-NC_033537
-NC_033854
-NC_033858
-NC_034846
-NC_037720
-NC_037721
-NC_039571
-NC_044112
 NC_056377
