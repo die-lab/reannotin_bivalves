@@ -24,6 +24,7 @@ do esearch -db nuccore -query $x | efetch -format gb >> all.gb
 done
 
 awk '{print $1}' dataset.txt > nc_codes.txt
+sed 's/\t/__/g'dataset.txt | sed 's/ /_/g' >> dataset.notab.txt
 ```
 
 Process this large genbank file using  a custom python script (extracting_feature_v4.py), to obtain protein and nucleotide sequences.
@@ -33,4 +34,8 @@ python extracting_feature_v4.py
 ```
 
 For some species, the genes have not been extracted from gb. Unknown reasons. Se who thery are at **missing_extraction.txt**.
+Rename files using the following loop.
 ```
+for code in $(cat nc_codes.txt); do value=$(grep $code dataset.notab.txt); for file in $(ls $code*); do mv $file $value${file#$code}; done; done
+```
+
