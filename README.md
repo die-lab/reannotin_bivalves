@@ -38,4 +38,8 @@ Rename files using the following loop.
 ```
 for code in $(cat nc_codes.txt); do value=$(grep $code dataset.notab.txt); for file in $(ls $code*); do mv $file $value${file#$code}; done; done
 ```
+Then replace the header inside each fasta file, to make it easier to get information from manual scrolling of alignment.
+```
+for fasta in *.fasta; do name=$(grep '>' $fasta); sed -i 's/'$name'/>'${fasta%.fasta}'/g' $fasta; done
+```
 
