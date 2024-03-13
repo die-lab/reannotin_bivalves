@@ -42,4 +42,8 @@ Then replace the header inside each fasta file, to make it easier to get informa
 ```
 for fasta in *.fasta; do name=$(grep '>' $fasta); sed -i 's/'$name'/>'${fasta%.fasta}'/g' $fasta; done
 ```
+Now parse it to a file for each genes. Use **list_mito_genes.txt**
+```
+for gene in $(cat list_mito_genes.txt); do cat all_genes_prot_headerOK/*'_'$gene'_'* > aligned_prot/$gene'_prot.fasta'; done
+```
 
