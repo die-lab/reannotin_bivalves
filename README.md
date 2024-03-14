@@ -1,20 +1,10 @@
 # reannotin_bivalves
 A dive into bivalves mitochondrial oddity
 
-After having accurately found mitochondrial genomes of a large number of bivalves (following Maeda et al. 2021 and others), I've downloaded them using ncbi tools.
-The starting file, dataset.txt, looked like this:
+I have searched for mitochondrial genomes on ncbi by command line, using the below command.
+But of course it will be better to have a file in which you have many different classes (like bivalves, gastropods, cefalopods, mammifera...) and you download everithing and parse it directly to files.
+But you need first to check if you find many mitochondrial genome using that type of query on the browser.
 
-|nc_codes| order| family| species| typo|
-|--------|------|-------|--------|-----|
-|NC_008451	|Adapedonta	|Hiatellidae	|Hiatella arctica|	SMI|
-|NC_016665	|Adapedonta	|Solenidae	|Solen grandis	|SMI|
-|NC_017616	|Adapedonta	|Solenidae	|Solen strictus	|SMI|
-|NC_020787|	Arcoida	|Arcidae	|Scapharca broughtonii	|SMI|
-|KF750628	|Arcoida	|Arcidae	|Scapharca kagoshimensis	|SMI|
-|KJ607173	|Arcoida	|Arcidae	|Tegillarca granosa	|SMI|
-|NC_008452|	Cardiida	|Cardiidae	|Acanthocardia tuberculata|	SMI|
-|KY780363 |Cardiida	|Donacidae	|Donax semistriatus	|Female|
-|OR416184 |	Cardiida	|Donacidae	|Donax semistriatus	|Male|
 
 Be sure to read /n as the line separator with IFS, and to have ncbi tools on your conda env.
 
