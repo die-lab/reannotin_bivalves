@@ -23,4 +23,4 @@ for i in *_extraction; do cd $i; mkdir $i'_nucl'; mkdir $i'_prot'; mv *_nucl.fas
 ```
 
 <h2>alternatives codons</h2>
-I retrieve alternative start codons from [ncbi indications](https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi#SG5-)
+I retrieve alternative start codons from [ncbi indications](https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi#SG5-).
