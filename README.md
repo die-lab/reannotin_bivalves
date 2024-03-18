@@ -17,4 +17,4 @@ We have to work differently on nucleotides and ptoteic sequence, so I keep it ap
 for i in *_extraction; do cd $i; mkdir $i'_nucl'; mkdir $i'_prot'; mv *_nucl.fasta $i'_nucl'; mv *_prot.fasta $i'_prot'; cd ..; done
 ```
 <h2>alternatives codons</h2>
-I retrieve alternative start codons from [ncbi indications] (https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi#SG5-)
+I retrieve alternative start codons from [ncbi indications](https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi#SG5-)
