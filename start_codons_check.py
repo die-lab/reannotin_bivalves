@@ -1,10 +1,12 @@
 import re
 import os
+import matplotlib.pyplot as plt
+import numpy as np
 from Bio import SeqIO
 from Bio.Seq import Seq
 
 #mitochondrial invertebrate start codons from ncbi
-alt_codons = ['ATA','ATT','ATC','GTG','TTG']
+alt_codons = ['ATG','ATA','ATT','ATC','GTG','TTG']
 
 mito_genes = ['ATP6', 'ATP8', 'CYTB', 'COX1', 'COX2', 'COX3', 'FORF', 'HORF', 'MORF', 'NAD1', 'NAD2', 'NAD3', 'NAD4', 'NAD4L', 'NAD5', 'NAD6']
 
@@ -15,6 +17,20 @@ def codons_of_three(input):
 	else:
 		w = 0
 	return w, len(record.seq)/3	
+
+def plot_start(alternative_dict,gene):
+	start_counts = {}
+	for codon in alt_codons: 
+		counts = np.fromiter(alternative_dict[gene][codon].values(), dtype=int)
+		positions = np.fromiter(alternative_dict[gene][codon].keys(), dtype=int)
+		start_counts[codon] = counts
+	fig, ax = plt.subplots()
+	for sex, start_count in start_counts.items():
+		p = ax.bar(positions, start_count, label=sex)
+	ax.set_title(str(gene + ' alternative start codons distribution'))
+	ax.legend()
+	plotname = str(gene+'_start_codons.svg')
+	plt.savefig(plotname)
 
 current_directory = os.getcwd()
 files_in_directory = os.listdir(current_directory)
@@ -47,6 +63,6 @@ for gene in mito_genes:
 			for x in pos_corr:
 				my_dict[x] = my_dict[x] + 1
 		alternative_dict[gene][alternative] = my_dict
-
+	plot_start(alternative_dict,gene)
 
 
