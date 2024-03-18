@@ -18,7 +18,7 @@ def codons_of_three(input):
 		w = 0
 	return w, len(record.seq)/3	
 
-def plot_start(alternative_dict,gene):
+def plot_start(alternative_dict,gene,heigth):
 	start_counts = {}
 	for codon in alt_codons: 
 		counts = np.fromiter(alternative_dict[gene][codon].values(), dtype=int)
@@ -29,6 +29,7 @@ def plot_start(alternative_dict,gene):
 		p = ax.bar(positions, start_count, label=sex)
 	ax.set_title(str(gene + ' alternative start codons distribution'))
 	ax.legend()
+	ax.hline(heigth)
 	plotname = str(gene+'_start_codons.svg')
 	plt.savefig(plotname)
 
@@ -63,6 +64,6 @@ for gene in mito_genes:
 			for x in pos_corr:
 				my_dict[x] = my_dict[x] + 1
 		alternative_dict[gene][alternative] = my_dict
-	plot_start(alternative_dict,gene)
+	plot_start(alternative_dict,gene,len(gene_files))
 
 
