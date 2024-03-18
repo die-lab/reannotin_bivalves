@@ -8,6 +8,7 @@ But you need first to check if you find many mitochondrial genome using that typ
 '''
 for class in $(cat metazoa*); do esearch -db nuccore -query "("$class"[Organism] AND mitochondrion[All Fields] AND complete[All Fields]" | efetch -format gb >> $class'.gb'; done 
 '''
+
 Now, extract every gene's sequence (nucleotides and protein) from gb files using custom python script **extracting_feature_v6.py**, and move them to separate directories.
 
 '''
