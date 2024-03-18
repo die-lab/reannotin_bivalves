@@ -1,5 +1,0 @@
-#Maybe we will want to avoid having mitochondrial genome of low quality, or with no indication about sex, or other reasons.
-
-#I do not know what the sex is. So I have removed them from the analyses.
-MT800514
-NC_056377
