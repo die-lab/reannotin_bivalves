@@ -1,4 +1,3 @@
-import biopython
 from Bio import SeqIO
 from Bio.Seq import Seq
 
