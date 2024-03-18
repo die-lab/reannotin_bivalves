@@ -4,6 +4,7 @@ A dive into bivalves mitochondrial oddity
 I have searched for mitochondrial genomes on ncbi by command line, using the below command.
 But of course it will be better to have a file in which you have many different classes (like bivalves, gastropods, cefalopods, mammifera...) and you download everithing and parse it directly to files.
 But you need first to check if you find many mitochondrial genome using that type of query on the browser.
+
 '''
 for class in $(cat metazoa*); do esearch -db nuccore -query "("$class"[Organism] AND mitochondrion[All Fields] AND complete[All Fields]" | efetch -format gb >> $class'.gb'; done 
 '''
