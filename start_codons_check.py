@@ -1,3 +1,5 @@
+import re
+import os
 from Bio import SeqIO
 from Bio.Seq import Seq
 
@@ -22,6 +24,8 @@ for gene in mito_genes:
 	lookup = str('_'+gene+'_')		
 	gene_files = [file for file in files_in_directory if lookup in file and file.endswith('.fasta')]
 	print(gene)
+	if len(gene_files) == 0:
+		continue
 	#how many of them have a weird length  
 	weird_length = 0	
 	length_tot = []
