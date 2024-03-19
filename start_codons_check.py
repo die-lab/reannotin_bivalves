@@ -25,11 +25,14 @@ def plot_start(alternative_dict,gene,heigth):
 		positions = np.fromiter(alternative_dict[gene][codon].keys(), dtype=int)
 		start_counts[codon] = counts
 	fig, ax = plt.subplots()
+	bottom = np.zeros(len(positions))
 	for sex, start_count in start_counts.items():
-		p = ax.bar(positions, start_count, label=sex)
+		p = ax.bar(positions, start_count, label=sex, bottom=bottom)
+		bottom += start_count
+		#ax.bar_label(p, label_type='center')
 	ax.set_title(str(gene + ' alternative start codons distribution'))
 	ax.legend()
-	ax.hline(heigth)
+	ax.axhline(heigth)
 	plotname = str(gene+'_start_codons.svg')
 	plt.savefig(plotname)
 
@@ -60,7 +63,7 @@ for gene in mito_genes:
 			record = SeqIO.read(file,"fasta")		
 			matches = re.finditer(alternative,str(record.seq))
 			positions = [match.end() for match in matches]
-			pos_corr = [(element // 3) for element in positions]
+			pos_corr = [(element / 3) for element in positions if (element % 3 == 0)]
 			for x in pos_corr:
 				my_dict[x] = my_dict[x] + 1
 		alternative_dict[gene][alternative] = my_dict
