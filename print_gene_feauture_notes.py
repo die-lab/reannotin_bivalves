@@ -14,8 +14,7 @@ for record in SeqIO.parse(genbank_file, 'genbank'):
 			gene_name = feature.qualifiers.get('gene', [''])[0].upper()
 			note = feature.qualifiers.get('note', [''])[0].upper()
 			if len(note) > 0:
-				print(record.id)
-				print(note)       	
+				print(record.id, gene_name, note)       	
 
      	
 
