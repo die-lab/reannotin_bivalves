@@ -59,8 +59,8 @@ def plot_start(alternative_dict, gene, heigth, weird, notes, no_notes):
 		p = ax.bar(positions, start_count, label=sex, bottom=bottom, width=0.5)
 		bottom += start_count
 		#ax.bar_label(p, label_type='center')
-	ax.set_title(str(gene + ' alternative start codons distribution'))
-	ax.legend(loc='upper right')
+	ax.set_title(str(genbank_file.strip('.gb').strip('/.') + ' ' + gene + ' stop codons distribution'))
+	ax.legend(loc='upper left')
 	ax.axhline(heigth)
 	weird_to_height_ratio = weird / heigth
 	ax.axhline(heigth-weird, color='black', ls='--', linewidth=0.5)
@@ -96,7 +96,8 @@ for gene in mito_genes:
 			else:
 				print('no notes about it')
 				no_notes_about += 1
-				print(notes_dict[gene][record.id])
+				if record.id in (notes_dict[gene].keys()):
+					print(notes_dict[gene][record.id])
 		length_tot.append(cot[1])		
 		weird_length = weird_length + cot[0]
 	weird_length_fraction = weird_length/len(gene_files)
@@ -109,9 +110,10 @@ for gene in mito_genes:
 			record = SeqIO.read(file,"fasta")		
 			matches = re.finditer(alternative,str(record.seq))
 			positions = [match.end() for match in matches]
-			pos_corr = [element for element in positions]
+			pos_corr = [(len(record.seq)-element) for element in positions]
 			for x in pos_corr:
-				my_dict[(int(max(length_tot))*3)-x] += 1
+				if (((int(max(length_tot))*3)-x-1)) < (int(max(length_tot))*3):
+					my_dict[(int(max(length_tot))*3)-x-1] += 1
 		alternative_dict[gene][alternative] = my_dict
 	plot_start(alternative_dict,gene,len(gene_files),weird_length,notes_about,no_notes_about)
 

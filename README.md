@@ -24,3 +24,9 @@ for i in *_extraction; do cd $i; mkdir $i'_nucl'; mkdir $i'_prot'; mv *_nucl.fas
 
 <h2>alternatives codons</h2>
 I retrieve alternative start codons from [ncbi indications] (https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi#SG5-).
+The same for the stop codons. I then used two scripts to plot thei distribution along genes. Use the following command to plot everything.
+You have to start the command from a directory where there are bot 'group'_extraction directory, and the relative 'species'.gb file.
+
+```
+for i in *extraction; do cd $i; mkdir $i'_start_codons_distribution'; mkdir $i'_stop_codons_distribution'; cd $i'_nucl'; python ../../start_codons_check_v2.py ../../${i%_extraction}.gb > ../$i'_start_codons_distribution'/$i'_start.log'; mv *.svg ../$i'_start_codons_distribution'/.;python ../../stop_codons_check.py ../../${i%_extraction}.gb > ../$i'_stop_codons_distribution'/$i'_stop.log'; mv *.svg ../$i'_stop_codons_distribution'/.; cd ../../.; done
+```
