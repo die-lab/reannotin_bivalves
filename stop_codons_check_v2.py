@@ -121,7 +121,7 @@ for gene in mito_genes:
 	alternative_dict[gene] = {}	
 	for alternative in alt_codons:	
 		my_dict = {i: 0 for i in range(0, int(max(length_tot))*3)}	
-		print(int(max(length_tot))*3)
+		#print(int(max(length_tot))*3)
 		for file in gene_files:
 			if file.split('_')[2] in code_to_skip.keys():
 				if str(file.split('_')[0] + '_' + file.split('_')[1]) not in code_to_skip[file.split('_')[2]]:
