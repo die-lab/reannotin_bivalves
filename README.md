@@ -16,7 +16,7 @@ Now, extract every gene's sequence (nucleotides and protein) from gb files using
 for gb_file in $(ls *.gb); do python extracting_feature_v6.py $gb_file; mkdir ${gb_file%.gb}_extraction; mv *.fasta ${gb_file%.gb}_extraction; done
 ```
 
-We have to work differently on nucleotides and ptoteic sequence, so I keep it apart.
+We have to work differently on nucleotides and ptoteic sequence, so I keep it apart. Check manually for bad annotation. I spotted some for bivalves and fix it. See *bivalves_issues.txt*
 
 ```
 for i in *_extraction; do cd $i; mkdir $i'_nucl'; mkdir $i'_prot'; mv *_nucl.fasta $i'_nucl'; mv *_prot.fasta $i'_prot'; cd ..; done
