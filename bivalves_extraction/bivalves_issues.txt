@@ -1,0 +1,7 @@
+COX2
+NC_014590.1 has two copy
+NC_031332.1 has two copy
+
+NAD2
+OK  NC_024927.1 one copy is actually a NAD4L, bad annotation under "product="
+OK  NC_026686.1 one copy is actually a NAD3, bad annotation under "product="
